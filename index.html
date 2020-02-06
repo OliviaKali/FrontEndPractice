@@ -19,7 +19,9 @@
     
         <fieldset>
             <legend>Your Face</legend>
-            <input type="file" name="photo" accept="image/*">
+            <input type="file" onchange="readURL(this);">
+            <br>
+            <img id="uploadImage" src="http://placehold.it/180" alt="your image" />
         </fieldset>
     
         <fieldset>
@@ -108,5 +110,6 @@
     <button>Submit</button>
 
 </body>
+<script src="datingform.js"></script>
 
 </html>
