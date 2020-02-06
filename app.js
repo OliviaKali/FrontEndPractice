@@ -9,8 +9,13 @@
 document.getElementById("websiteURL").innerHTML = 
 "This Site's URL is: " + window.location.href;
 
-
 // Write a JavaScript function that reverse a number 
+function reverseNum(n) {
+    n = n + "";
+    return n.split("").reverse().join("");
+}
+console.log(reverseNum(123));
+console.log(reverseNum(96525));
 
 // Write a JavaScript function which will take an array of numbers 
 //stored and find the second lowest 
