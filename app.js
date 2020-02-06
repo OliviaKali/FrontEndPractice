@@ -1,6 +1,23 @@
 // Write a JavaScript program to display the current day and time
 
 // Write a JavaScript program to get the current date.
+var today = new Date();
+console.log(today)
+
+var day = today.getDate();
+var month = today.getMonth() + 1;
+var year = today.getFullYear();
+
+if (day < 10) {
+    day = "0" + day;
+}
+
+if (month < 10) {
+    month = "0" + month;
+}
+
+today = month + "/" + day + "/" + year;
+console.log(today);
 
 // Write a JavaScript program to calculate multiplication 
 //and division of two numbers (input from user).
