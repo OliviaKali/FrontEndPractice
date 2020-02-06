@@ -1,6 +1,32 @@
 // Write a JavaScript program to display the current day and time
 
+var currentDate = new Date();
+var currentDay = currentDate.getDay();
+var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", 
+    "Wednesday", "Thursday", "Friday", "Saturday"];
+
+console.log("Today is " + currentDate + "!")
+
+var hour = currentDate.getHours();
+var min = currentDate.getMinutes();
+var seconds = currentDate.getSeconds();
+
+var AMorPM = (hour >= 12) ? "PM" : "AM";
+hour = (hour >= 12) ? hour - 12 : hour;
+
+if (min < 10) {
+    min = "0" + min;
+}
+if (seconds < 10) {
+    seconds = "0" + seconds;
+}
+if (hour === 0) {
+    hour = 12;
+}
+console.log(`Current time is ${hour}:${min} ${seconds} ${AMorPM}`)
+
 // Write a JavaScript program to get the current date.
+
 var today = new Date();
 console.log(today)
 
