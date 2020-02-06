@@ -59,22 +59,22 @@ function largestNum(n1, n2, n3, n4, n5)
         + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5);
     }
 
-    if (n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5) {
+    else if (n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5) {
         window.alert (n2 + " is the largest number out of numbers: " 
         + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
     }
 
-    if (n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5) {
+    else if (n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5) {
         window.alert( n3 + " is the largest number out of numbers: " 
         + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
     }
 
-    if (n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5) {
+    else if (n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5) {
         window.alert( n4 + " is the largest number out of numbers: " 
         + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
     }
 
-    if (n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4) {
+    else if (n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4) {
         window.alert( n5 + " is the largest number out of numbers: " 
         + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
     }
@@ -88,6 +88,14 @@ function largestNum(n1, n2, n3, n4, n5)
 
 // Write a JavaScript function to validate whether a given 
 //value type is NaN or not.
+
+function valueNaN(value) {
+    var NaNresult = value !== value;
+    console.log(NaNresult);
+}
+
+valueNaN('value')
+valueNaN(3)
 
 // Write a JavaScript function to check whether given 
 //value types are same or not.
