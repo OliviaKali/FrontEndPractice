@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dating Website - HTML, CSS Practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Please Enter Your Details For Our Dating Wesbite!</h1>
+    </header>
+
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            First name? <input type="text" name="firstName"> <br>
+            Last name? <input type="text" name="lastName"> <br>
+        </fieldset> <br>
+        <fieldset>
+            <legend>Favourite Things</legend>
+            Favourite cartoon? <input type="text" name="favCartoon"> <br>
+            Favourite pizza? <input type="text" name="lastName"> <br>
+        </fieldset> <br>
+    
+        <fieldset>
+            <legend>Your Face</legend>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Your General Details</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br>
+
+            <label>Gender:</label>
+            <input type="radio" name="M-F" value="male">
+            <label for="male">Male</label>
+            <!-- <br> -->
+            <input type="radio" name="M-F" value="female">
+            <label for="female">Female</label>
+            <br>
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dateOfBirth" value="dateOfBirth">
+            <br>
+
+            <label>Favorite Color:</label>
+            <input type="color" name="color" value="color">
+            <br>
+
+            <label>Which Country:</label>
+            <!-- <input list="countries" name="country">
+            <datalist>
+                <option value="United States of America"></option>
+                <option value="United Kingdom"></option>
+            </datalist> -->
+
+            <select>
+                <option value="USA">United States of America</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Poland">Poland</option>
+            </select>
+        </fieldset>
+  
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <label>Height:</label>
+            <label>Short</label>
+            <input type="range" name="height">
+            <label>Tall</label>
+            <br>
+
+            <label>Salary:</label>
+            <label>Poor</label>
+            <input type="range" name="salary">
+            <label>Rich</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+            <br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="tel" name="mobile">
+            <br>
+
+            <label for="address">Address:</label>
+            <textarea type="text" name="address"></textarea>
+            <br>
+
+           <label>Method to Contact You:</label>
+           <input type="checkbox" name="contactMethod" value="email">
+           <label for="email">Email</label>
+           
+           <input type="checkbox" name="contactMethod" value="whatsapp">
+           <label for="whatsapp">Whatsapp</label>
+
+           <input type="checkbox" name="contactMethod" value="inAppChat">
+           <label for="inAppChat">In-app Chat</label>
+
+        </fieldset>
+    </form>
+
+    <button>Submit</button>
+
+</body>
+
+</html>
