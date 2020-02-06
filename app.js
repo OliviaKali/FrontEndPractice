@@ -1,6 +1,4 @@
-// Write a JavaScript program to display the current day 
-//and time in the following format
-
+// Write a JavaScript program to display the current day and time
 
 // Write a JavaScript program to get the current date.
 
@@ -8,6 +6,9 @@
 //and division of two numbers (input from user).
 
 // Write a JavaScript program to get the website URL (loading page)
+document.getElementById("websiteURL").innerHTML = 
+"This Site's URL is: " + window.location.href;
+
 
 // Write a JavaScript function that reverse a number 
 
