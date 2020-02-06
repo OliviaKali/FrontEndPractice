@@ -53,15 +53,18 @@ var num2;
 
 function multiply (num1, num2) {
     var result= num1 * num2;
-    console.log(result);
+    // console.log(result);
     return result;
 }
 
 function divide (num1, num2) {
     var result = num1/num2;
-    console.log(result);
+    // console.log(result);
     return result;
 }
+
+console.log(multiply(2,5));
+console.log(divide(10,2));
 
 // Write a JavaScript program to get the website URL (loading page)
 
@@ -83,6 +86,19 @@ console.log(reverseNum(96525));
 //and second greatest numbers, respectively. 
 
 // Write a JavaScript program to get the integers in range (x, y).
+
+ var range = function(number1, number2) {
+    if (number2 - number1 === 2) {
+        return [number1 + 1]
+    }
+    else {
+        var arrayList = range(number1, number2 - 1);
+        arrayList.push(number2 - 1);
+        return(arrayList)
+    }
+}
+
+console.log(range(2,9));
 
 // Write a merge sort program in JavaScript.
 
