@@ -16,60 +16,60 @@
 
 
     <form>
-    
+
         <fieldset>
             <legend>Your Face</legend>
-            <input type="file" name="photo" accept="image/*">
+            <input type="file" id="files" name="photo" accept="image/*">
+            <br>
+            <img id="image" />
         </fieldset>
-    
+
         <fieldset>
             <legend>Your General Details</legend>
 
-            <label for="name">Name:</label>
-            <input type="text" name="name" value="Your Full Name" required>
-            <br>
+            <label class="addingMargin displayBlock" for="name">Name:
+                <input type="text" name="name" value="Your Full Name" required>
+            </label>
 
-            <label>Gender:</label>
-            <input type="radio" name="M-F" value="male">
-            <label for="male">Male</label>
-            <!-- <br> -->
-            <input type="radio" name="M-F" value="female">
-            <label for="female">Female</label>
-            <br>
 
-            <label for="age">Age:</label>
-            <input type="number" name="age" value="18">
-            <br>
+            <label class="addingMargin displayBlock">Gender:
+                <input type="radio" name="M-F" value="male">
+                <label for="male">Male</label>
+                <!-- <br> -->
+                <input type="radio" name="M-F" value="female">
+                <label for="female">Female</label>
+            </label>
 
-            <label>Date of Birth:</label>
-            <input type="date" name="dateOfBirth" value="dateOfBirth">
-            <br>
 
-            <label>Favorite Color:</label>
+            <label class="addingMargin displayBlock" for="age">Age:
+                <input type="number" name="age" value="18">
+            </label>
+
+
+            <label class="addingMargin displayBlock">Date of Birth:
+                <input type="date" name="dateOfBirth" value="dateOfBirth">
+            </label>
+
+            <label class="addingMargin displayBlock">Favorite Color:
             <input type="color" name="color" value="color">
-            <br>
+            </label>
 
-            <label>Which Country:</label>
-            <!-- <input list="countries" name="country">
-            <datalist>
-                <option value="United States of America"></option>
-                <option value="United Kingdom"></option>
-            </datalist> -->
-
+            <label class="addingMargin displayBlock">Which Country:
             <select>
                 <option value="USA">United States of America</option>
                 <option value="UK">United Kingdom</option>
                 <option value="Poland">Poland</option>
             </select>
         </fieldset>
-  
+    </label>
+
         <fieldset>
             <legend>Your Indicators</legend>
-            <label>Height:</label>
+            <label class="addingMargin displayBlock">Height:
             <label>Short</label>
             <input type="range" name="height">
             <label>Tall</label>
-            <br>
+            </label>
 
             <label>Salary:</label>
             <label>Poor</label>
@@ -80,33 +80,48 @@
 
         <fieldset>
             <legend>Your Contact Information</legend>
-            <label for="email">Email:</label>
+            <label class="addingMargin displayBlock" for="email">Email:
             <input type="email" name="email" required>
-            <br>
+        </label>
 
-            <label for="mobile">Mobile:</label>
+            <label class="addingMargin displayBlock" for="mobile">Mobile:
             <input type="tel" name="mobile" required>
-            <br>
+        </label>
 
-            <label for="address">Address:</label>
+            <label class="addingMargin displayBlock" for="address">Address:
             <textarea type="text" name="address"></textarea>
-            <br>
+        </label>
 
-           <label>Method to Contact You:</label>
-           <input type="checkbox" name="contactMethod" value="email">
-           <label for="email">Email</label>
-           
-           <input type="checkbox" name="contactMethod" value="whatsapp">
-           <label for="whatsapp">Whatsapp</label>
+            <label class="addingMargin displayBlock">Method to Contact You:
+            <input type="checkbox" name="contactMethod" value="email">
+            <label for="email">Email</label>
 
-           <input type="checkbox" name="contactMethod" value="inAppChat">
-           <label for="inAppChat">In-app Chat</label>
+            <input type="checkbox" name="contactMethod" value="whatsapp">
+            <label for="whatsapp">Whatsapp</label>
+
+            <input type="checkbox" name="contactMethod" value="inAppChat">
+            <label for="inAppChat">In-app Chat</label>
+        </label>
 
         </fieldset>
     </form>
 
     <button>Submit</button>
 
+
+    <script>
+        document.getElementById("files").onchange = function () {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("image").src = e.target.result;
+            };
+
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        };
+    </script>
 </body>
 
 </html>

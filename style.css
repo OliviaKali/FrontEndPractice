@@ -1,7 +1,20 @@
+img {
+    margin-top: 10px;
+    width: 150px;
+}
+
 fieldset {
     border: 5px solid yellow;
     background: lightyellow;
     padding: 20px;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.addingMargin {
+    margin-bottom: 10px;
 }
 
 label:hover, input:hover {
