@@ -85,6 +85,25 @@ console.log(reverseNum(96525));
 //stored and find the second lowest 
 //and second greatest numbers, respectively. 
 
+function FindNum (arrayNumbers) {
+    arrayNumbers.sort(function(x,y) {
+        return x- y;
+    })
+        var number = [arrayNumbers[0]];
+        var list = [];
+
+        for (var i=1; i < arrayNumbers.length; i++) {
+            if (arrayNumbers[i-1] !== arrayNumbers[i]) {
+                number.push(arrayNumbers[i]);
+            }
+        }
+        list.push(number[1], number[number.length-2]);
+    return list.join(", ");
+
+}
+console.log(FindNum([3, 6, 7, 2, 1]));
+console.log(FindNum([0, -1, 3, 5, 2]));
+
 // Write a JavaScript program to get the integers in range (x, y).
 
  var range = function(number1, number2) {
@@ -97,7 +116,6 @@ console.log(reverseNum(96525));
         return(arrayList)
     }
 }
-
 console.log(range(2,9));
 
 // Write a merge sort program in JavaScript.
@@ -161,9 +179,10 @@ valueNaN(3);
 
 function valueType(value1, value2) {
     if (valueNaN(value1) || valueNaN(value2)) {
-        console.log(valueNaN(value1) === valueNaN(value2));  
+        return(valueNaN(value1) === valueNaN(value2));  
     }
-    console.log(toString.call(value1) === toString.call(value2));
+    return(toString.call(value1) === toString.call(value2));
 }
 
-valueType(3, 5);
+console.log(valueType(3, 5));
+// console.log(valueType(3, "3"));
