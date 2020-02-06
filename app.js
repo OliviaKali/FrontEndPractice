@@ -20,12 +20,12 @@ function divide (num1, num2) {
     return result;
 }
 
-
 // Write a JavaScript program to get the website URL (loading page)
 
 document.getElementById("websiteURL").innerHTML = 
 "This Site's URL is: " + window.location.href;
-// console.log(window.location.href);
+
+console.log(window.location.href);
 
 // Write a JavaScript function that reverse a number 
 function reverseNum(n) {
@@ -94,8 +94,17 @@ function valueNaN(value) {
     console.log(NaNresult);
 }
 
-valueNaN('value')
-valueNaN(3)
+valueNaN('value');
+valueNaN(3);
 
 // Write a JavaScript function to check whether given 
 //value types are same or not.
+
+function valueType(value1, value2) {
+    if (valueNaN(value1) || valueNaN(value2)) {
+        console.log(valueNaN(value1) === valueNaN(value2));  
+    }
+    console.log(toString.call(value1) === toString.call(value2));
+}
+
+valueType(3, 5);
