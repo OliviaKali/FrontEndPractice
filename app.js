@@ -2,7 +2,7 @@
 
 var currentDate = new Date();
 var currentDay = currentDate.getDay();
-var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", 
+var daysOfTheWeek = ["Sunday", "Monday", "Tuesday",
     "Wednesday", "Thursday", "Friday", "Saturday"];
 
 console.log("Today is " + currentDate + "!")
@@ -51,25 +51,25 @@ console.log(today);
 var num1;
 var num2;
 
-function multiply (num1, num2) {
-    var result= num1 * num2;
-    // console.log(result);
-    return result;
+function multiply() {
+    num1 = document.getElementById("number1").value;
+    num2 = document.getElementById("number2").value;
+    document.getElementById("answer").innerHTML = num1 * num2;
 }
 
-function divide (num1, num2) {
-    var result = num1/num2;
-    // console.log(result);
-    return result;
+function divide() {
+    num1 = document.getElementById("number1").value;
+    num2 = document.getElementById("number2").value;
+    document.getElementById("answer").innerHTML = num1 / num2;
 }
 
-console.log(multiply(2,5));
-console.log(divide(10,2));
+console.log(multiply(2, 5));
+console.log(divide(10, 2));
 
 // Write a JavaScript program to get the website URL (loading page)
 
-document.getElementById("websiteURL").innerHTML = 
-"This Site's URL is: " + window.location.href;
+document.getElementById("websiteURL").innerHTML =
+    "This Site's URL is: " + window.location.href;
 
 console.log(window.location.href);
 
@@ -85,19 +85,19 @@ console.log(reverseNum(96525));
 //stored and find the second lowest 
 //and second greatest numbers, respectively. 
 
-function FindNum (arrayNumbers) {
-    arrayNumbers.sort(function(x,y) {
-        return x- y;
+function FindNum(arrayNumbers) {
+    arrayNumbers.sort(function (x, y) {
+        return x - y;
     })
-        var number = [arrayNumbers[0]];
-        var list = [];
+    var number = [arrayNumbers[0]];
+    var list = [];
 
-        for (var i=1; i < arrayNumbers.length; i++) {
-            if (arrayNumbers[i-1] !== arrayNumbers[i]) {
-                number.push(arrayNumbers[i]);
-            }
+    for (var i = 1; i < arrayNumbers.length; i++) {
+        if (arrayNumbers[i - 1] !== arrayNumbers[i]) {
+            number.push(arrayNumbers[i]);
         }
-        list.push(number[1], number[number.length-2]);
+    }
+    list.push(number[1], number[number.length - 2]);
     return list.join(", ");
 
 }
@@ -106,19 +106,21 @@ console.log(FindNum([0, -1, 3, 5, 2]));
 
 // Write a JavaScript program to get the integers in range (x, y).
 
- var range = function(number1, number2) {
+var range = function (number1, number2) {
     if (number2 - number1 === 2) {
         return [number1 + 1]
     }
     else {
         var arrayList = range(number1, number2 - 1);
         arrayList.push(number2 - 1);
-        return(arrayList)
+        return (arrayList)
     }
 }
-console.log(range(2,9));
+console.log(range(2, 9));
 
 // Write a merge sort program in JavaScript.
+
+
 
 // Write a JavaScript conditional statement to find the largest 
 //of five numbers. Display an alert box to show the result. 
@@ -129,39 +131,38 @@ var n3;
 var n4;
 var n5;
 
-function largestNum(n1, n2, n3, n4, n5)
-{
-    if (n1 > n2 && n1 > n3 && n1 > n4 && n1 >n5) {
-        window.alert( n1 + " is the largest number out of numbers: " 
-        + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5);
+function largestNum(n1, n2, n3, n4, n5) {
+    if (n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5) {
+        window.alert(n1 + " is the largest number out of numbers: "
+            + n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5);
     }
 
     else if (n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5) {
-        window.alert (n2 + " is the largest number out of numbers: " 
-        + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
+        window.alert(n2 + " is the largest number out of numbers: "
+            + n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5)
     }
 
     else if (n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5) {
-        window.alert( n3 + " is the largest number out of numbers: " 
-        + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
+        window.alert(n3 + " is the largest number out of numbers: "
+            + n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5)
     }
 
     else if (n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5) {
-        window.alert( n4 + " is the largest number out of numbers: " 
-        + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
+        window.alert(n4 + " is the largest number out of numbers: "
+            + n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5)
     }
 
     else if (n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4) {
-        window.alert( n5 + " is the largest number out of numbers: " 
-        + n1 + ", " + n2 + ", "  + n3 + ", " + n4 + ", " + n5)
+        window.alert(n5 + " is the largest number out of numbers: "
+            + n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5)
     }
     else {
         window.alert("Unable to find largest number");
     }
-     }
+}
 
-     largestNum(2, 3, 4, 5, 1);
-     largestNum(3, 6, 7, 2, 1)
+largestNum(2, 3, 4, 5, 1);
+largestNum(3, 6, 7, 2, 1)
 
 // Write a JavaScript function to validate whether a given 
 //value type is NaN or not.
@@ -179,9 +180,9 @@ valueNaN(3);
 
 function valueType(value1, value2) {
     if (valueNaN(value1) || valueNaN(value2)) {
-        return(valueNaN(value1) === valueNaN(value2));  
+        return (valueNaN(value1) === valueNaN(value2));
     }
-    return(toString.call(value1) === toString.call(value2));
+    return (toString.call(value1) === toString.call(value2));
 }
 
 console.log(valueType(3, 5));

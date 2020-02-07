@@ -9,10 +9,15 @@
 <body>
     <h1>Poorly Done HTML only used to Render JS Results on Page</h1>
 
-    <!-- <p id="number1">1st Number: </p>
-    input/label??? -->
-
     <p id="websiteURL"></p>
+
+    <form>
+        1st Number : <input type="number" id="number1" /><br>
+        2nd Number: <input type="number" id="number2" /><br>
+        <input type="button" onClick="multiply()" Value="Multiply" />
+        <input type="button" onClick="divide()" Value="Divide" />
+        </form>
+        <p>Answer: <span id="answer"></span"></p>
 
 </body>
 <script src="app.js"></script>
