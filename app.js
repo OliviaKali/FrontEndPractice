@@ -63,9 +63,6 @@ function divide() {
     document.getElementById("answer").innerHTML = num1 / num2;
 }
 
-console.log(multiply(2, 5));
-console.log(divide(10, 2));
-
 // Write a JavaScript program to get the website URL (loading page)
 
 document.getElementById("websiteURL").innerHTML =
@@ -119,6 +116,21 @@ var range = function (number1, number2) {
 console.log(range(2, 9));
 
 // Write a merge sort program in JavaScript.
+// Sample array : [34,7,23,32,5,62]
+// Sample output : [5, 7, 23, 32, 34, 62]
+
+var unSortedArr = [34, 7, 23, 32, 5, 62, 1000];
+
+function sortArr() {
+    unSortedArr.sort(function(a,b){
+        return a-b
+    });
+}
+
+console.log(unSortedArr.sort(function(a,b){
+    return a-b
+}));
+
 
 
 
