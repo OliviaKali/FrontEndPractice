@@ -119,7 +119,7 @@ console.log(range(2, 9));
 // Sample array : [34,7,23,32,5,62]
 // Sample output : [5, 7, 23, 32, 34, 62]
 
-var unSortedArr = [34, 7, 23, 32, 5, 62, 1000];
+var unSortedArr = [34, 7, 23, 32, 5, 62, 1000, 2, 3];
 
 function sortArr() {
     unSortedArr.sort(function(a,b){
@@ -130,9 +130,6 @@ function sortArr() {
 console.log(unSortedArr.sort(function(a,b){
     return a-b
 }));
-
-
-
 
 // Write a JavaScript conditional statement to find the largest 
 //of five numbers. Display an alert box to show the result. 
